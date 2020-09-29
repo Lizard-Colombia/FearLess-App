@@ -3,9 +3,9 @@ import React from "react";
 function WelcomeMessage(props) {
   const { greeting, name } = props;
   return (
-    <p className="welcome-message">
+    <h2 className="welcome-message">
       {greeting}, {name}!
-    </p>
+    </h2>
   );
 }
 
