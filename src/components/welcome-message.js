@@ -4,7 +4,8 @@ function WelcomeMessage(props) {
   const { greeting, name } = props;
   return (
     <h2 className="welcome-message">
-      {greeting}, {name}!
+      {greeting}
+      {name}!
     </h2>
   );
 }
