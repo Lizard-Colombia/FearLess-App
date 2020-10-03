@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import Header from "./header";
+
 import WelcomeMessage from "./welcome-message";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
@@ -47,67 +51,50 @@ function App() {
   }
   // RETURN SECTION
   return (
-    <main>
-      <header>
-        <nav>
-          <a href="/">
-            <span role="img" aria-label="bamboo">
-              🎍
-            </span>
-          </a>{" "}
-          |{" "}
-          <a href="/">
-            <span>FearLess</span>
-          </a>{" "}
-          |
-          <a href="./settings-page">
-            <span role="img" aria-label="gear">
-              ⚙
-            </span>
-          </a>
-        </nav>
-      </header>
-      <h1>FearLess</h1>
-      <WelcomeMessage greeting="Welcome" name=""></WelcomeMessage>
+    <BrowserRouter>
+      <Header />
 
-      <form>
-        <label>
-          Username:{" "}
-          <input type="text" value={userName} onChange={onUserNameChange} />
-        </label>
-        <input type="submit" />
-      </form>
-      {/* have the form now Welcome the user - by name -  */}
-      <p>Hi, {userName}! It is nice to meet you.</p>
-      <p>
-        We are now going to build a list of fears that we can work on together.
-      </p>
-      {/* Begin List */}
-      <p> My Fear List</p>
-      <TodoForm addTodo={addTodo} />
-      <TodoList
-        todos={todos}
-        toggleComplete={toggleComplete}
-        removeTodo={removeTodo}
-      />
+      <main>
+        <h1>FearLess</h1>
+        <WelcomeMessage greeting="Welcome" name=""></WelcomeMessage>
 
-      {/* End of List */}
+        <form>
+          <label>
+            Username:{" "}
+            <input type="text" value={userName} onChange={onUserNameChange} />
+          </label>
+          <input type="submit" />
+        </form>
+        {/* have the form now Welcome the user - by name -  */}
+        <p>Hi, {userName}! It is nice to meet you.</p>
+        <p>
+          We are now going to build a list of fears that we can work on
+          together.
+        </p>
+        {/* Begin List */}
+        <p> My Fear List</p>
+        <TodoForm addTodo={addTodo} />
+        <TodoList
+          todos={todos}
+          toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
+        />
 
-      {/* begin bottom navigation section */}
+        {/* End of List */}
 
-      <nav>
-        <button>Progress</button>
+        {/* begin bottom navigation section */}
 
-        <button>Profile</button>
-
-        <button>Emergency</button>
-
-        <button>Rewards</button>
-
-        <button>Tasks</button>
-      </nav>
-      <footer>©Elizabeth Smith | 2020</footer>
-    </main>
+        <footer>
+          <nav>
+            <Link to="./progress-page">Progress</Link>
+            <Link to="./profile-page">Profile</Link>
+            <Link to="./emergency-page">Emergency</Link>
+            <Link to="./rewards-page">Rewards</Link>
+            <Link to="./tasks-page">Tasks</Link>
+          </nav>
+        </footer>
+      </main>
+    </BrowserRouter>
   );
 }
 
