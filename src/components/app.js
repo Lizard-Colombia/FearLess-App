@@ -1,20 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import WelcomeMessage from "./welcome-message";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import Todo from "./Todo";
 
+const LOCAL_STORAGE_KEY = "react-todo-list-todos";
+// first USERNAME Section
 function App() {
   const [userName, setUserName] = useState("");
   const onUserNameChange = (event) => {
     setUserName(event.target.value);
   };
-
+  // FEAR LIST FUNCTIONS
   const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (storageTodos) {
+      setTodos(storageTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
+  }, [todos]);
+
   function addTodo(todo) {
     setTodos([todo, ...todos]);
   }
 
+  function toggleComplete(id) {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      })
+    );
+  }
+
+  function removeTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+  // RETURN SECTION
   return (
     <main>
       <header>
@@ -36,16 +67,9 @@ function App() {
           </a>
         </nav>
       </header>
-      <div>
-        <button>Add New Item</button>
-        <button>Filter List</button>
-      </div>
       <h1>FearLess</h1>
       <WelcomeMessage greeting="Welcome" name=""></WelcomeMessage>
-      <h3>
-        First, lets get to know each other. Please let me know what you would
-        like me to call you.
-      </h3>
+
       <form>
         <label>
           Username:{" "}
@@ -54,50 +78,35 @@ function App() {
         <input type="submit" />
       </form>
       {/* have the form now Welcome the user - by name -  */}
-      <h2>Hi, {userName}! It is nice to meet you.</h2>
-      <h3>
+      <p>Hi, {userName}! It is nice to meet you.</p>
+      <p>
         We are now going to build a list of fears that we can work on together.
-      </h3>
-      {/* React To Do List from Video */}
-      <p> React ToDo List</p>
+      </p>
+      {/* Begin List */}
+      <p> My Fear List</p>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} />
-      {/* form for entering in fears */}
-      <p></p>
-      <b>Instructions: </b> List a word or brief description of your fear in the
-      large field and then list a number between 1-10 in the small field to show
-      the power of this fear.{" "}
-      <em>Example: 1 is a mild fear and 10 is totally over-powering.</em>
-      <form>
-        <ul>
-          <li>
-            <label>
-              Fear: {""}
-              <input type="text" />
-            </label>
-          </li>
-          <li>
-            <label>
-              Rank {""}
-              <input type="number" />
-            </label>
-          </li>
-        </ul>
-      </form>
-      <h2>Text input fields</h2>
-      <footer>
-        <div>
-          <button>Progress</button>
+      <TodoList
+        todos={todos}
+        toggleComplete={toggleComplete}
+        removeTodo={removeTodo}
+      />
 
-          <button>Profile</button>
+      {/* End of List */}
 
-          <button>Emergency</button>
+      {/* begin bottom navigation section */}
 
-          <button>Rewards</button>
+      <nav>
+        <button>Progress</button>
 
-          <button>Tasks</button>
-        </div>
-      </footer>
+        <button>Profile</button>
+
+        <button>Emergency</button>
+
+        <button>Rewards</button>
+
+        <button>Tasks</button>
+      </nav>
+      <footer>©Elizabeth Smith | 2020</footer>
     </main>
   );
 }
