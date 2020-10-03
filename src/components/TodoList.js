@@ -1,9 +1,10 @@
 import React from "react";
 import Todo from "./Todo";
+import "./TodoList.css";
 
 function TodoList({ todos, toggleComplete, removeTodo }) {
   return (
-    <ul>
+    <ul className="FearList-A">
       {todos.map((todo) => (
         <Todo
           key={todo.id}

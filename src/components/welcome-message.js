@@ -1,13 +1,8 @@
 import React from "react";
 
 function WelcomeMessage(props) {
-  const { greeting, name } = props;
-  return (
-    <h2 className="welcome-message">
-      {greeting}
-      {name}!
-    </h2>
-  );
+  const { name } = props;
+  return <p> Welcome, {name} = props;</p>;
 }
 
 export default WelcomeMessage;

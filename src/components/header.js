@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./header.css";
+// import "./header.css";
 
 // A bar at the top with the following items from left to right:
 // Logo Icon; App Name; Settings Icon (a gear)
