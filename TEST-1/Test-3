@@ -1,0 +1,15 @@
+import React from "react";
+import Todo from "./Todo";
+import "./TodoList.css";
+// To Do List
+function TodoList({ todos }) {
+  return (
+    <ul className="FearList-A">
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} />
+      ))}
+    </ul>
+  );
+}
+
+export default TodoList;
