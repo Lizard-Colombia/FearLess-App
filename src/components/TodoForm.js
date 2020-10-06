@@ -32,7 +32,7 @@ function TodoForm({ addTodo }) {
         value={todo.task}
         onChange={handleTaskInputChange}
       />
-      <button className="FearList-Submit" type="submit">submit</button>
+      <button type="submit" className="FearList-Submit">Submit</button>
     </form>
   );
 }

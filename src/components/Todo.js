@@ -13,11 +13,10 @@ function Todo({ todo, toggleComplete, removeTodo }) {
     <div style={{ display: "flex" }}>
       <input type="checkbox" onClick={handleCheckboxClick} />
       <li
-        style={{
-          color: "#356732",
+        className="FearList-List" style={{
+          
           textDecoration: todo.completed ? "line-through" : null,
-        }}
-      >
+        }}>
         {todo.task}
       </li>
       <button onClick={handleRemoveClick}>X</button>
