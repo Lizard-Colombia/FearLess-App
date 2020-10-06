@@ -6,6 +6,7 @@ import Header from "./header";
 import WelcomeMessage from "./welcome-message";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
+import "./TodoList.css";
 
 const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 // first USERNAME Section
@@ -72,7 +73,7 @@ function App() {
           together.
         </p>
         {/* Begin List */}
-        <p> My Fear List</p>
+        <p className="FearList-Title"> My Fear List</p>
         <TodoForm addTodo={addTodo} />
         <TodoList
           todos={todos}
