@@ -4,7 +4,7 @@ import "./TodoList.css";
 
 function TodoList({ todos, toggleComplete, removeTodo }) {
   return (
-    <ul className="FearList-A">
+    <ul className="FearList">
       {todos.map((todo) => (
         <Todo
           key={todo.id}

@@ -14,7 +14,7 @@ function Todo({ todo, toggleComplete, removeTodo }) {
       <input type="checkbox" onClick={handleCheckboxClick} />
       <li
         style={{
-          color: "black",
+          color: "#356732",
           textDecoration: todo.completed ? "line-through" : null,
         }}
       >
