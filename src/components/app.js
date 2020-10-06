@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Link} from "react-router-dom";
 import Header from "./header";
 
 import WelcomeMessage from "./welcome-message";

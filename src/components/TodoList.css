@@ -1,13 +1,16 @@
 .FearList-A {
   list-style-type: none;
-  Color: rgb(245, 245, 226);
   background-color: darkcyan;
+  color: rgb(245, 245, 226);
   display: block;
+
 }
 
 
 .FearList-Title {
   color: goldenrod;
+  font-weight: bold ;
+  font-variant-caps: small-caps;
 
 }
 
