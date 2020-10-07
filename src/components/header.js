@@ -11,7 +11,7 @@ function Header() {
       <nav>
         <Link to="./welcome-page">
           <span role="img" aria-label="bamboo">
-            🎍
+            🎍
           </span>
         </Link>{" "}
         |{" "}
@@ -22,6 +22,7 @@ function Header() {
         <Link to="./settings-page">
           <span role="img" aria-label="gear">
             ⚙
+      
           </span>
         </Link>
       </nav>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Link} from "react-router-dom";
 import Header from "./header";
 
 import WelcomeMessage from "./welcome-message";
@@ -9,7 +9,7 @@ import TodoList from "./TodoList";
 import "./TodoList.css";
 import "../main.css";
 
-import BottomBar from "./bottom-bar";
+
 
 const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 // first USERNAME Section
@@ -92,7 +92,23 @@ function App() {
 
         {/* begin bottom navigation section */}
 <hr />
-        <BottomBar></BottomBar>
+<nav className="Navigation-Footer">
+        <Link to="./progress-page"><span role="img" aria-label="progress">
+            📈
+          </span></Link>
+        <Link to="./profile-page"><span role="img" aria-label="profile">
+            👤
+          </span></Link>
+        <Link to="./emergency-page"><span role="img" aria-label="emergency">
+            🏥
+          </span></Link>
+        <Link to="./rewards-page"><span role="img" aria-label="rewards">
+            🏆
+          </span></Link>
+        <Link to="./tasks-page"><span role="img" aria-label="tasks">
+            ✅
+          </span></Link>
+      </nav>
       </main>
     </BrowserRouter>
   );
