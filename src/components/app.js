@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter, Link} from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import Header from "./header";
 
 import WelcomeMessage from "./welcome-message";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 import "./TodoList.css";
+import "../main.css";
+
+import BottomBar from "./bottom-bar";
 
 const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 // first USERNAME Section
@@ -56,7 +59,7 @@ function App() {
       <Header />
 
       <main>
-        <h1>FearLess</h1>
+        <h1 nameClass="Title">FearLess</h1>
         <WelcomeMessage greeting="Welcome" name=""></WelcomeMessage>
 
         <form>
@@ -66,13 +69,17 @@ function App() {
           </label>
           <input type="submit" />
         </form>
+
+
         {/* have the form now Welcome the user - by name -  */}
         <p>Hi, {userName}! It is nice to meet you.</p>
         <p>
           We are now going to build a list of fears that we can work on
           together.
         </p>
-        {/* Begin List */}
+
+
+      {/* BEGIN FEAR LIST */}
         <p className="FearList-Title"> My Fear List</p>
         <TodoForm addTodo={addTodo} />
         <TodoList
@@ -84,16 +91,8 @@ function App() {
         {/* End of List */}
 
         {/* begin bottom navigation section */}
-
-        <footer>
-          <nav>
-            <Link to="./progress-page">Progress</Link>
-            <Link to="./profile-page">Profile</Link>
-            <Link to="./emergency-page">Emergency</Link>
-            <Link to="./rewards-page">Rewards</Link>
-            <Link to="./tasks-page">Tasks</Link>
-          </nav>
-        </footer>
+<hr />
+        <BottomBar></BottomBar>
       </main>
     </BrowserRouter>
   );

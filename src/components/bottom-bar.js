@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 // A bar at the bottom of the app with the following buttons in order form left to right:
 // Progress; Profile; Emergency; Rewards; Task
-function Footer() {
+function BottomBar() {
   return (
-    <Footer>
-      <hr />
+    <BottomBar>
+      
       <nav className="Navigation-Footer">
         <Link to="./progress-page"><span role="img" aria-label="progress">
             📈
@@ -24,8 +24,8 @@ function Footer() {
             ✅
           </span>Tasks</Link>
       </nav>
-    </Footer>
+    </BottomBar>
   );
 }
 
-export default Footer;
+export default BottomBar;

@@ -1,41 +1,53 @@
 *{
-    box-sizing: border-box;
-    font-family: inherit;
-  }
-  
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 html {
-    font-size: 20px;
+  font-size: 20px;
 }
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 background: url("./images/stripes.png");
 max-width: 750px;
 margin: 1rem;
 padding: .5rem;
+align-content: center;
 }
 
 a {
-    transition: color 0.15s, background-color 0.15s;
-  }
-  /* Unvisited link - which is the default state. :link is a pseudo-class. */
-  a:link {
-    background-color: transparent;
-    color: #356732;
-  }
-  a:visited {
-    background-color: transparent;
-    color: #669966;
-  }
-  a:focused {
-    background-color: #99CC99;
-    color: white;
-  }
-  a:hover {
-    background-color: #356732;
-    color: white;
-  }
+  transition: color 0.15s, background-color 0.15s;
+  padding: 5px;
+}
+/* Unvisited link - which is the default state. :link is a pseudo-class. */
+a:link {
+  background-color: transparent;
+  color: #356732;
+}
+a:visited {
+  background-color: transparent;
+  color: #669966;
+}
+a:focused {
+  background-color: #99CC99;
+  color: white;
+}
+a:hover {
+  background-color: #356732;
+  color: white;
+}
+
+h1 {
+  color:goldenrod;
+}
+hr{
+ height: 4px;
+ border-width: 0;
+ color: gray;
+ background-color: gray;
+}
