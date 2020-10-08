@@ -25,9 +25,9 @@ function App() {
         <Route path="/welcome-page">
           <WelcomePage />
         </Route>
-        {/* <Route path="/fear-list-page">
+        <Route path="/fear-list-page">
           <FearListPage />
-        </Route> */}
+        </Route>
         <Route path="/settings-page">
           <SettingsPage />
         </Route>
@@ -52,13 +52,5 @@ function App() {
     </BrowserRouter>
   );
 }
-// function App (){
-//   return (
-//     <BrowserRouter>
-//     <Header />
-//     <Footer />
-//     </BrowserRouter>
-//     );
-// }
 
 export default App;
