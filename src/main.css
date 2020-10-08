@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   font-family: inherit;
 }
@@ -12,17 +12,21 @@ html {
   font-size: 20px;
 }
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-background: url("./images/stripes.png");
-max-width: 750px;
-margin: 1rem;
-padding: .5rem;
-align-content: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: url("./images/stripes.png");
+  font-variant: small-caps;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 0.5rem;
+  align-content: center;
 }
 
 a {
   transition: color 0.15s, background-color 0.15s;
-  padding: 5px;
+  padding: 0.3em;
+  font-size: 1.3em;
+  text-decoration: none;
 }
 /* Unvisited link - which is the default state. :link is a pseudo-class. */
 a:link {
@@ -34,7 +38,7 @@ a:visited {
   color: #669966;
 }
 a:focused {
-  background-color: #99CC99;
+  background-color: #99cc99;
   color: white;
 }
 a:hover {
@@ -43,11 +47,14 @@ a:hover {
 }
 
 h1 {
-  color:goldenrod;
+  color: goldenrod;
 }
-hr{
- height: 4px;
- border-width: 0;
- color: gray;
- background-color: gray;
+hr {
+  height: 4px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+h3 {
+  color: #356732;
 }

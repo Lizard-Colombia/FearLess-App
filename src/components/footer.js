@@ -5,9 +5,9 @@ import React from "react";
 // Progress; Profile; Emergency; Rewards; Task
 function Footer() {
   return (
-    <Footer >
+    <footer >
       <p className="Footer">©Elizabeth Smith | 2020</p>
-    </Footer>
+    </footer>
   );
 }
 

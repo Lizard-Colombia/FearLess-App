@@ -2,12 +2,10 @@ import React from "react";
 
 function SettingsPage() {
   return (
-    <SettingsPage>
-      {" "}
-      <h1>
-        This page is currently under construction. Thank you for your patience.
-      </h1>
-    </SettingsPage>
+    <>
+      <h1>Settings Page</h1>
+      <h3>This page is currently under construction.</h3>
+    </>
   );
 }
 

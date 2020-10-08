@@ -1,12 +1,12 @@
 import React from "react";
 
-function ProgressPage() {
+function EmergencyPage() {
   return (
     <>
-      <h1>Progress Page</h1>
+      <h1>Emergency Page</h1>
       <h3>This page is currently under construction.</h3>
     </>
   );
 }
 
-export default ProgressPage;
+export default EmergencyPage;
