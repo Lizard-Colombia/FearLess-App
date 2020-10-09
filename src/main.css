@@ -32,6 +32,7 @@ a {
 a:link {
   background-color: transparent;
   color: #356732;
+  align-content: center;
 }
 a:visited {
   background-color: transparent;
@@ -49,13 +50,22 @@ a:hover {
 h1 {
   color: goldenrod;
   font-size: 1.5em;
+  text-align: center;
 }
 hr {
   height: 4px;
   border-width: 0;
   color: gray;
   background-color: gray;
+  align-content: center;
 }
 h3 {
+  color: #356732;
+  text-align: center;
+}
+
+h4 {
+  font-weight: normal;
+  text-align: center;
   color: #356732;
 }

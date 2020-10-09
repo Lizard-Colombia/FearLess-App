@@ -1,11 +1,11 @@
 import React from "react";
-
+import "./footer.css";
 
 // A bar at the bottom of the app with the following buttons in order form left to right:
 // Progress; Profile; Emergency; Rewards; Task
 function Footer() {
   return (
-    <footer >
+    <footer>
       <p className="Footer">©Elizabeth Smith | 2020</p>
     </footer>
   );
