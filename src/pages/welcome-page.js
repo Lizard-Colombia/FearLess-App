@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../components/welcome-page.css";
 
 function WelcomePage() {
@@ -13,7 +14,13 @@ function WelcomePage() {
         Let's begin your journey to becoming more FearLess by building a list
         the fears you would like to work on.
       </h3>
-      <button className="BeginList-Button">Begin My List Now</button>
+      <Link to="./fear-list-page">Go to My Fear List Now</Link>
+      {/* <Link to="/">
+          <span role="img" aria-label="bamboo">
+            🎍
+          </span>
+        </Link>{" "} */}
+
       <br></br>
       <hr></hr>
     </>

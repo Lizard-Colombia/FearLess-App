@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/welcome-page">
+        <Route path="/" exact>
           <WelcomePage />
         </Route>
         <Route path="/fear-list-page">

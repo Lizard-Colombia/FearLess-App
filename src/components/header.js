@@ -8,7 +8,7 @@ function Header() {
   return (
     <header>
       <nav>
-        <Link to="./welcome-page">
+        <Link to="/">
           <span role="img" aria-label="bamboo">
             🎍
           </span>
