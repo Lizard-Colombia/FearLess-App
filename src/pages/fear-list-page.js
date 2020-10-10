@@ -56,6 +56,7 @@ function FearListPage() {
         toggleComplete={toggleComplete}
         removeTodo={removeTodo}
       />
+      <hr></hr>
     </>
   );
 }
