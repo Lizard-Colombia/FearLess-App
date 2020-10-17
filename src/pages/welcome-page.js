@@ -14,8 +14,8 @@ function WelcomePage() {
       </h4>
       <img src={frog} alt="Frog among lilly pads" width="400" />
       <h4>
-        Let's begin your journey to becoming more FearLess by building a list
-        the fears you would like to work on.
+        Let's begin your journey to becoming more <b>FearLess</b> by building a
+        list of the fears that you would like to work on.
       </h4>
       <Link to="./fear-list-page" className="Welcome-FearList__Button">
         Go to My Fear List Now
