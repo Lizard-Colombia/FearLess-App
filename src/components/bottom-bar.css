@@ -1,6 +1,29 @@
-.Bottom-Bar {
-  align-content: center;
+.Bottom-Bar--1stRow {
   text-align: center;
-  background-color: #fdcc9a93;
-  line-height: 2.25em;
+}
+
+.Bottom-Bar--2ndRow {
+  align-content: center;
+  font-size: 10px;
+  color: #141f42;
+  text-align: center;
+}
+
+.Bottom-Bar--1stRow:link {
+  background-color: transparent;
+  color: #356732;
+  text-align: center;
+  align-content: center;
+}
+.Bottom-Bar--1stRow:visited {
+  background-color: transparent;
+  color: #669966;
+}
+.Bottom-Bar--1stRow:focused {
+  background-color: #99cc99;
+  color: white;
+}
+.Bottom-Bar--1stRow:hover {
+  background-color: #356732;
+  color: white;
 }

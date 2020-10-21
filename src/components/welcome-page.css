@@ -11,3 +11,25 @@
   align-content: center;
   margin-left: 70px;
 }
+
+.Welcome-Image {
+  text-align: center;
+}
+
+.Welcome-FearList__Button:link {
+  background-color: transparent;
+  color: #c74abd;
+  align-content: center;
+}
+.Welcome-FearList__Button:visited {
+  background-color: transparent;
+  color: #d82fd8;
+}
+.Welcome-FearList__Button:focused {
+  background-color: #99cc99;
+  color: white;
+}
+.Welcome-FearList__Button:hover {
+  background-color: #356732;
+  color: white;
+}

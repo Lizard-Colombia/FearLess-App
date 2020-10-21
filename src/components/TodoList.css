@@ -3,23 +3,21 @@
 
   color: black;
   display: block;
-
 }
 
 .FearList-Title {
   color: goldenrod;
-  font-weight: bold ;
+  font-weight: bold;
   font-variant-caps: small-caps;
-
 }
 
 .FearList-Input {
-font-size: 90%;
-color: #183319;
-border-radius: 5px;
-display: inline-flex;
-background-color: #fdcc9a6d;
-border: 2px solid #653414a3;
+  font-size: 90%;
+  color: #183319;
+  border-radius: 5px;
+  display: inline-flex;
+  background-color: #fdcc9a6d;
+  border: 2px solid #653414a3;
 }
 
 .FearList-Submit {
@@ -31,8 +29,5 @@ border: 2px solid #653414a3;
 .FearList-List {
   color: #356732;
   font-variant-caps: small-caps;
-  padding: .075em;
-
-  
+  padding: 0.075em;
 }
-

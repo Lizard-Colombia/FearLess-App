@@ -12,7 +12,14 @@ function WelcomePage() {
         This App is being designed to help you work through your fears and
         anxieties at a pace that works for you.
       </h4>
-      <img src={frog} alt="Frog among lilly pads" width="400" />
+      <div className="Welcome-Image">
+        <img
+          src={frog}
+          alt="Frog among lilly pads"
+          width="80%"
+          text-align="center"
+        />
+      </div>
       <h4>
         Let's begin your journey to becoming more <b>FearLess</b> by building a
         list of the fears that you would like to work on.

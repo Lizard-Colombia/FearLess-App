@@ -1,6 +1,6 @@
 .Header-Nav__Bar {
-  align-content: center;
   text-align: center;
-  background-color: #fdcc9a93;
+
   line-height: 2.25em;
+  padding-top: 0.5em;
 }
